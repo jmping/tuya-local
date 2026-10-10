@@ -123,6 +123,16 @@ entities:
           - dps_val: alarm
             value: true
           - value: false
+  # Diagnostic view of the last DP 26 event (not persistent contact state).
+  - entity: sensor
+    name: Last zone message
+    category: diagnostic
+    icon: "mdi:shield-search"
+    dps:
+      - id: 26
+        type: utf16b64
+        name: sensor
+        optional: true
   - entity: event
     translation_key: alarm
     dps:
